@@ -7,7 +7,6 @@ A referrer is the URL of the webpage (or app) that caused the app to be opened v
 Most APIs are subject to various platform limitations and they're subject to the referrer policy of the webpage.
 Therefore, all information read via the APIs of this plugin may not be available due to various reasons.
 
-
 # iOS
 
 On iOS this works by reading [`NSUserActivity#referrerUrl`](https://developer.apple.com/documentation/foundation/nsuseractivity/2875762-referrerurl).
