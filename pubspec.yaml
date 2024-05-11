@@ -1,7 +1,9 @@
 name: referrer
-description: "A plugin to read various referrer information"
+description: "A Flutter plugin to read various referrer information for incoming deeplinks"
 version: 0.0.2
 homepage: https://uekoetter.dev
+repository: https://github.com/ueman/flutter_referrer_info
+issue_tracker: https://github.com/ueman/flutter_referrer_info/issues
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
