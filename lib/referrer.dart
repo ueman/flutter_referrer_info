@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -10,6 +12,13 @@ class Referrer {
   /// OS version support is as per documentation above.
   /// There's no backwards compatibility.
   Future<ReferrerInfo?> getReferrer() async {
+    if (kIsWeb) {
+      return null;
+    }
+    final isiOSorAndroid = Platform.isAndroid || Platform.isIOS;
+    if (!isiOSorAndroid) {
+      return null;
+    }
     try {
       final referrer = await methodChannel
           .invokeMethod<Map<dynamic, dynamic>>('getReferrer');
